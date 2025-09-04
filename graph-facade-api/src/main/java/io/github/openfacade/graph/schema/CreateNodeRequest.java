@@ -20,6 +20,9 @@ public class CreateNodeRequest {
 
     private Map<String, Object> properties = new HashMap<>();
 
+    // 额外的属性定义
+    private Map<String, Object> additionalProperties = new HashMap<>();
+
     private CreateNodeRequest(@NonNull String nodeId, @NonNull String nodeSchema, Map<String, Object> properties) {
         this.nodeId = Objects.requireNonNull(nodeId, "nodeId must not be null");
         this.nodeSchema = Objects.requireNonNull(nodeSchema, "nodeSchema must not be null");
